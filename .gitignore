@@ -30,3 +30,9 @@
 *.exe
 *.out
 *.app
+
+build/*
+out_put/*
+*/debug/*
+*/release/*
+Makefile*

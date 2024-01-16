@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/">
+        <file>icon/traffic.png</file>
+        <file>Menuformat.xml</file>
+    </qresource>
+</RCC>
