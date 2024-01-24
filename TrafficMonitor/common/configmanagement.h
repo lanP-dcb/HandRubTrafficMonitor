@@ -4,12 +4,11 @@
 #include <iostream>
 #include <QSettings>
 #include <QApplication>
-#include <QAtomicInt>
-#include <atomic>
-#include <mutex>
+#include <QDebug>
+#include "default.h"
 
-#define CONFIG_NAME "config.ini"
-#define G_SYSTEM    "system"
+#define DEBUG(x) qDebug() <<__FUNCTION__<<__LINE__<<x
+
 class ConfigManagement
 {
 public:
@@ -47,12 +46,13 @@ private:
         }
     };
     ConfigManagement& operator=(const ConfigManagement&);
-
     QSettings *obj{};
 };
 
 #define GetCfgObj ConfigManagement::GetSingleton()
+#define GetCfgVal(group,key) GetCfgObj->GetValue(group,key)
 #define GetCfgValToBool(group,key) GetCfgObj->GetValue(group,key).toBool()
 #define GetCfgValToBoolDef(group,key,def) GetCfgObj->GetValue(group,key,def).toBool()
+#define SetCfgVal(group,key,val) GetCfgObj->SetValue(group,key,val)
 
 #endif // CONFIGMANAGEMENT_H

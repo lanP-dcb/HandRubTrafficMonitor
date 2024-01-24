@@ -2,69 +2,84 @@
 <tray>  
     <action obj="menu_select_net_link" type="2">
         <name>选择网络链接</name>
-        <icon>:/icon/traffic.png</icon>
+        <icon>:/icon/connection.ico</icon>
         <menu>
             <action obj="menu_refresh_net_link_list">
                 <name>刷新网络链接列表</name>
+                <value>24</value>
             </action>
             <separator>
             </separator>
             <group obj="group_select_net_link" type="3">
                 <select obj="group_auto_select">
                     <name>自动选择</name>
+                    <value>25</value>
                 </select>
                 <select obj="group_all_select">
                     <name>选择全部</name>
+                    <value>26</value>
                 </select>
             </group>
         </menu>
     </action>    
     <action obj="menu_net_info">
         <name>连接详情</name>
-        <icon>:/icon/traffic.png</icon>
+        <icon>:/icon/info.ico</icon>
+        <value>1</value>
     </action>
     <separator>
     </separator>
     <action obj="menu_set_top"  type="1" def="1">
         <name>总是置顶</name>
-        <icon>:/icon/traffic.png</icon>
+        <icon>:/icon/pin.ico</icon>
+        <value>2</value>
     </action>
     <action obj="menu_set_mouse_penetration" type="1" def="0">
         <name>鼠标穿透</name>
-        <icon>:/icon/traffic.png</icon>
+        <icon>:/icon/mouse.ico</icon>
+        <value>3</value>
     </action>
     <action obj="menu_set_lock_win_pos" type="1" def="0">
         <name>锁定窗口位置</name>
-        <icon>:/icon/traffic.png</icon>
+        <icon>:/icon/lock.ico</icon>
+        <value>4</value>
     </action>
     <action obj="menu_show_more_info" type="1" def="1">
         <name>显示更多信息</name>
-        <icon>:/icon/traffic.png</icon>
+        <icon>:/icon/more.ico</icon>
+        <value>5</value>
     </action>
     <action obj="menu_show_taskbar_win" type="1" def="0">
         <name>显示任务栏窗口</name>
-        <icon>:/icon/traffic.png</icon>
+        <icon>:/icon/taskbar_window.ico</icon>
+        <value>6</value>
     </action>
     <action obj="menu_show_main_win" type="1" def="1">
         <name>显示主窗口</name>
-        <icon>:/icon/traffic.png</icon>
+        <icon>:/icon/main_window.ico</icon>
+        <value>7</value>
     </action>
     <action obj="menu_set_win_opaqueness" type="2">
         <name>窗口不透明度</name>
         <icon>:/icon/traffic.png</icon>
         <menu>
-            <group obj="group_set_win_alpha" type="3">
+            <group obj="group_set_win_alpha" type="3" def="0">
+                <cfg>group_win_alpha</cfg>
                 <select obj="group_win_alpha_100">
                     <name>100%</name>
+                    <value>8</value>
                 </select>
                 <select obj="group_win_alpha_80">
                     <name>80%</name>
+                    <value>9</value>
                 </select>
                 <select obj="group_win_alpha_60">
                     <name>60%</name>
+                    <value>10</value>
                 </select>
                 <select obj="group_win_alpha_40">
                     <name>40%</name>
+                    <value>11</value>
                 </select>
             </group>
         </menu>
@@ -73,70 +88,81 @@
     </separator>
     <action obj="menu_other_fun" type="2">
         <name>其他功能</name>
-        <icon>:/icon/traffic.png</icon>
+        <icon>:/icon/function.ico</icon>
         <menu>
             <action obj="menu_other_fun_change_skin">
                 <name>更换皮肤</name>
-                <icon>:/icon/traffic.png</icon>
+                <icon>:/icon/skn.ico</icon>
+                <value>12</value>
             </action>
             <action obj="menu_other_fun_change_notify_icon">
-                <name>更换皮肤</name>
-                <icon>:/icon/traffic.png</icon>
+                <name>更换通知区图标</name>
+                <icon>:/icon/notify.ico</icon>
+                <value>13</value>
             </action>
             <separator>
             </separator>
-            <action obj="menu_other_fun_change_notify_icon">
+            <action obj="menu_other_fun_screen_border" type="1" def="0">
                 <name>允许超出屏幕边界</name>
+                <value>14</value>
             </action>
             <separator>
             </separator>
             <action obj="menu_other_fun_history_flow">
                 <name>历史流量统计</name>
-                <icon>:/icon/traffic.png</icon>
+                <icon>:/icon/statistics.ico</icon>
+                <value>15</value>
             </action>
             <action obj="menu_other_fun_plugins_manager">
                 <name>插件管理</name>
-                <icon>:/icon/traffic.png</icon>
+                <icon>:/icon/plugins.ico</icon>
+                <value>16</value>
             </action>
         </menu>
     </action>
     <action obj="menu_option">
         <name>选项</name>
-        <icon>:/icon/traffic.png</icon>
+        <icon>:/icon/setting.ico</icon>
+        <value>17</value>
     </action>
     <separator>
     </separator>
     <action obj="menu_help" type="2">
         <name>帮助</name>
-        <icon>:/icon/traffic.png</icon>
+        <icon>:/icon/help.ico</icon>
         <menu>
             <action obj="manu_help_help">
                 <name>帮助</name>
-                <icon>:/icon/traffic.png</icon>
+                <icon>:/icon/help.ico</icon>
+                <value>18</value>
             </action>
             <action obj="menu_help_faq">
                 <name>常见问题</name>
-                <icon>:/icon/traffic.png</icon>
+                <icon>:/icon/notifyicon.ico</icon>
+                <value>19</value>
             </action>
             <separator>
             </separator>
             <action obj="menu_update_log">
                 <name>更新日志</name>
+                <value>20</value>
             </action>
             <separator>
             </separator>
             <action obj="menu_about">
                 <name>关于</name>
                 <icon>:/icon/traffic.png</icon>
+                <value>21</value>
             </action>
             <action obj="menu_check_update">
                 <name>检查更新</name>
-                <icon>:/icon/traffic.png</icon>
+                <value>22</value>
             </action>
         </menu>
     </action>
     <action obj="menu_exit">
         <name>退出</name>
-        <icon>:/icon/traffic.png</icon>
+        <icon>:/icon/exit.ico</icon>
+        <value>23</value>
     </action>
 </tray>

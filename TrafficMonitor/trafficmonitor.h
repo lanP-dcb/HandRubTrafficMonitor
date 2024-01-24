@@ -1,42 +1,31 @@
 #ifndef TRAFFICMONITOR_H
 #define TRAFFICMONITOR_H
 
+
+
 #include "common/configmanagement.h"
-#include <QMainWindow>
-#include <QSystemTrayIcon>
-#include <QMenu>
-#include <QAction>
-#include <QCloseEvent>
-#include <QScreen>
-#include <QWindow>
-#include <QDomDocument>
-#include <QActionGroup>
+#include "include/mainmonitorwin.h"
+#include "include/traymanagement.h"
+#include <QObject>
 
-QT_BEGIN_NAMESPACE
-namespace Ui { class TrafficMonitor; }
-QT_END_NAMESPACE
 
-class TrafficMonitor : public QMainWindow
+class TrafficMonitor : public QObject
 {
     Q_OBJECT
-
 public:
-    TrafficMonitor(QWidget *parent = nullptr);
+    TrafficMonitor();
     ~TrafficMonitor();
 
+    void InitConnect();
+
 private:
-    void InitTray();
-    void Xml();
-    void InitMenu(const QDomNodeList& nodelist, QMenu* menu);
-    void InitMenu(const QDomNodeList& nodelist, QActionGroup* group);
-    Ui::TrafficMonitor *ui;
-    QSystemTrayIcon *m_trayIcon{};      // 系统托盘
-    QMenu  *m_trayMenu{};               // 托盘菜单
-
-    QList<QAction*> m_trayActionList;   // 托盘菜单右键列表
+    MainMonitorWin *m_mainWin{};        // 主窗口
+    TrayManagement *m_trayMngmt{};      // 系统托盘窗口
     QWidget *m_taskBarWidget{};         // 任务栏窗口
-//    QAction *
 
+#if UNIX
+//    AppIndicator *indicator;
+#endif
 
 };
 #endif // TRAFFICMONITOR_H
