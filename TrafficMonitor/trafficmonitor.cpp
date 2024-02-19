@@ -8,6 +8,7 @@ TrafficMonitor::TrafficMonitor()
         DEBUG("初始化托盘程序失败");
         exit(-1);
     }
+    m_mainWin->SetMenu(m_trayMngmt->GetMenu());
     InitConnect();
     m_trayMngmt->InitCfg();
 }

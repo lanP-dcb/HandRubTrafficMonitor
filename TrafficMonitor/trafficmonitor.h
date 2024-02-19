@@ -1,8 +1,6 @@
 #ifndef TRAFFICMONITOR_H
 #define TRAFFICMONITOR_H
 
-
-
 #include "common/configmanagement.h"
 #include "include/mainmonitorwin.h"
 #include "include/traymanagement.h"

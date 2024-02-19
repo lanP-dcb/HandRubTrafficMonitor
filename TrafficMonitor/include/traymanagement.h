@@ -26,6 +26,7 @@ public:
 
     bool InitUi();
     bool InitCfg();
+    QMenu* GetMenu();
 private:
     void InitMenu(const QDomNodeList& nodelist, QMenu* menu);
     void InitGroup(const QDomNodeList& nodelist, QActionGroup* group);

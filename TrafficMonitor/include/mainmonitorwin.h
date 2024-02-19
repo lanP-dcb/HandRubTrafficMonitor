@@ -11,6 +11,7 @@
 #include <QScreen>
 #include <QObject>
 #include <QWidget>
+#include <QMenu>
 #include <QDesktopWidget>
 #include <QMessageBox>
 #include <QMouseEvent>
@@ -22,6 +23,7 @@ class MainMonitorWin : public QWidget
 public:
     MainMonitorWin(QWidget *parent = nullptr);
 
+    void SetMenu(QMenu* menu);
 public slots:
     void SlotMainWindowOperation(QObject* obj,bool checked,int value);
 
@@ -43,6 +45,7 @@ private:
     bool pos_lock;                      // 窗口位置锁定
     bool mouseTransparent;              // 鼠标穿透
     bool cross;                         // 屏幕越界
+    QMenu *m_menu;                      // 菜单
 };
 
 #endif // MAINMONITORWIN_H

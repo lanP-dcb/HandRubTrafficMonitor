@@ -2,6 +2,6 @@ TEMPLATE = subdirs
 
 SUBDIRS += \
     TrafficMonitor \
-#    TrafficMonitorTest
+    TrafficMonitorTest
 
 

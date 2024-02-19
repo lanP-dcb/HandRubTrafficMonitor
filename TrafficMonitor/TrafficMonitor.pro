@@ -24,13 +24,18 @@ unix {
 }
 
 HEADERS += \
+    common/NetInfoBase.h \
     common/configmanagement.h \
     common/default.h \
+    include/base/linuxnetinfo.h \
+    include/networkmonitor.h \
     trafficmonitor.h \
     include/traymanagement.h \
     include/mainmonitorwin.h
 
 SOURCES += \
+    include/base/linuxnetinfo.cpp \
+    include/networkmonitor.cpp \
     main.cpp \
     trafficmonitor.cpp \
     include/traymanagement.cpp \

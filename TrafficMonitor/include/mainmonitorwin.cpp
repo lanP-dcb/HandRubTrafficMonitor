@@ -15,8 +15,6 @@ MainMonitorWin::MainMonitorWin(QWidget *parent)
     desktop = QApplication::desktop();
     QApplication::screens();
     if (GetCfgVal(G_SYSTEM,WIN_POS_X).isNull()) {
-        DEBUG(desktop->width() << desktop->height());
-        DEBUG(this->width() << this->height());
         SetCfgVal(G_SYSTEM,WIN_POS_X,desktop->width()-this->width());
         SetCfgVal(G_SYSTEM,WIN_POS_Y,desktop->height()-this->height());
     }
@@ -28,6 +26,11 @@ MainMonitorWin::MainMonitorWin(QWidget *parent)
     DEBUG(availableGeometry.width());
 }
 
+void MainMonitorWin::SetMenu(QMenu *menu)
+{
+    m_menu = menu;
+}
+
 void MainMonitorWin::mousePressEvent(QMouseEvent *e)
 {
     if (e->button() == Qt::LeftButton) {
@@ -36,7 +39,7 @@ void MainMonitorWin::mousePressEvent(QMouseEvent *e)
         mousePress = true;
         m_pos = e->pos();
     } else if (e->button() == Qt::RightButton) {
-
+        m_menu->exec(e->globalPos());
     }
 }
 

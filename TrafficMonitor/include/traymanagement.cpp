@@ -68,6 +68,11 @@ bool TrayManagement::InitCfg()
     return true;
 }
 
+QMenu *TrayManagement::GetMenu()
+{
+    return m_trayMenu;
+}
+
 void TrayManagement::InitMenu(const QDomNodeList &nodelist, QMenu *menu)
 {
     for (int i = 0; i < nodelist.size(); i++) {
@@ -163,6 +168,7 @@ void TrayManagement::QActionEmitForwardSlots(bool checked)
 }
 
 /*
+ * 其他   右键菜单
 1.连接详情
     2.总是置顶
     3.鼠标穿透
